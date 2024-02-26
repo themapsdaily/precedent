@@ -47,7 +47,7 @@ export default async function Home() {
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          An opinionated collection of components, hooks, and utilities for your
+          Unlocking India's Data - for your
           Next.js project.
         </p>
         <div
