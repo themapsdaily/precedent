@@ -1,0 +1,39 @@
+.instagram-logo {
+  position: relative;
+  width: 50px;
+  height: 50px;
+}
+
+.circle,
+.circle-inner,
+.bar {
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+}
+
+.circle-inner {
+  width: 30px;
+  height: 30px;
+  top: 10px;
+  left: 10px;
+}
+
+.bar {
+  width: 10px;
+  height: 20px;
+  top: 20px;
+  left: 25px;
+  transform: rotate(45deg);
+}
+
+.bar:nth-child(2) {
+  transform: rotate(-45deg);
+}
