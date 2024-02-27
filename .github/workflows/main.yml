@@ -16,9 +16,5 @@ jobs:
       - name: Install dependencies
         run: npm install react-icons
 
-      - name: Build and deploy
-        uses: vercel/vercel@v2
-        with:
-          url: ${{ env.VERCEL_URL }}
-          token: ${{ secrets.VERCEL_TOKEN }}
-          env: "NODE_ENV=production"
+      - name: Run tests
+        run: npm test
