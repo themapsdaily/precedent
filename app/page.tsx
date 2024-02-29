@@ -47,7 +47,7 @@ export default async function Home() {
           className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
           style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
         >
-          Unlocking India's Data: One Platform for Unifying Data, and Empowering
+          Unlocking India’s Data: One Platform for Unifying Data, and Empowering
           Everyone.
         </p>
         <div
