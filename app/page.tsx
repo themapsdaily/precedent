@@ -32,8 +32,8 @@ export default async function Home() {
           rel="noreferrer"
           className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
         >
-          <Instagram className="h-5 w-5 text-[#1d9bf0]" />
-          <p className="text-sm font-semibold text-[#1d9bf0]">
+          <Instagram className="h-5 w-5 text-[#e1306c]" />
+          <p className="text-sm font-semibold text-[#e1306c]">
             Introducing TheMapsDaily
           </p>
         </a>
