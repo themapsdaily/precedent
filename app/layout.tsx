@@ -9,7 +9,7 @@ import { Suspense } from "react";
 export const metadata = {
   title: "The Maps Daily - Data Warehouse",
   description:
-    "Precedent is the all-in-one solution for your Next.js project. It includes a design system, authentication, analytics, and more.",
+    "Unlocking India's Data: One Platform for All, Making Information Accessible and Empowering Everyone.",
   metadataBase: new URL("https://precedent.dev"),
   themeColor: "#FFF",
 };
