@@ -80,9 +80,9 @@ const features = [
     large: true,
   },
   {
-    title: "Performance first",
+    title: "Peer Rating",
     description:
-      "Built on [Next.js](https://nextjs.org/) primitives like `@next/font` and `next/image` for stellar performance.",
+      "With almost 78K followers on Instagram, The Maps Daily revers respect from its peers.",
     demo: <WebVitals />,
   },
   {
