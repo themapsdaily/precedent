@@ -30,7 +30,7 @@ export default async function Home() {
           href="https://instagram.com/themapsdaily"
           target="_blank"
           rel="noreferrer"
-          className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-blue-100 px-7 py-2 transition-colors hover:bg-blue-200"
+          className="mx-auto mb-5 flex max-w-fit animate-fade-up items-center justify-center space-x-2 overflow-hidden rounded-full bg-pink-100 px-7 py-2 transition-colors hover:bg-pink-200"
         >
           <Instagram className="h-5 w-5 text-[#e1306c]" />
           <p className="text-sm font-semibold text-[#e1306c]">
