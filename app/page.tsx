@@ -7,22 +7,6 @@ import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
 
 export default async function Home() {
-  const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/precedent",
-    {
-      ...(process.env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }),
-      // data will revalidate every 24 hours
-      next: { revalidate: 86400 },
-    },
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log(e));
-
   return (
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0">
@@ -51,25 +35,30 @@ export default async function Home() {
           Everyone.
         </p>
       </div>
-      <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, large }) => (
-          <Card
-            key={title}
-            title={title}
-            description={description}
-            demo={
-              title === "Beautiful, reusable components" ? (
-                <ComponentGrid />
-              ) : (
-                demo
-              )
-            }
-            large={large}
-          />
-        ))}
-      </div>
     </>
   );
+}
+
+const featuresCom = () => {
+  return(
+    <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
+      {features.map(({ title, description, demo, large }) => (
+        <Card
+          key={title}
+          title={title}
+          description={description}
+          demo={
+            title === "Beautiful, reusable components" ? (
+              <ComponentGrid />
+            ) : (
+              demo
+            )
+          }
+          large={large}
+        />
+      ))}
+    </div>
+  )
 }
 
 const features = [
