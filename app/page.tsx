@@ -1,10 +1,11 @@
 import Card from "@/components/home/card";
 import { DEPLOY_URL } from "@/lib/constants";
-import { Github, Instagram} from "@/components/shared/icons";
+import { Github, Instagram } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
+import Link from 'next/link';
 
 export default async function Home() {
   return (
@@ -34,13 +35,18 @@ export default async function Home() {
           Unlocking India’s Data: One Platform for Unifying Data, and Empowering
           Everyone.
         </p>
+
+        {/* Link to the new template page */}
+        <Link href="/template_page1" className="mt-6 block text-blue-500">
+          Go to Template Page 1
+        </Link>
       </div>
     </>
   );
 }
 
 const featuresCom = () => {
-  return(
+  return (
     <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
       {features.map(({ title, description, demo, large }) => (
         <Card
@@ -58,8 +64,8 @@ const featuresCom = () => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
 const features = [
   {
@@ -71,7 +77,7 @@ const features = [
   {
     title: "Peer Rating",
     description:
-      "With almost 78K followers on Instagram, The Maps Daily revers respect from its peers.",
+      "With almost 78K followers on Instagram, The Maps Daily earns respect from its peers.",
     demo: <WebVitals />,
   },
   {
