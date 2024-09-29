@@ -6,6 +6,7 @@ import ComponentGrid from "@/components/home/component-grid";
 import Image from "next/image";
 import { nFormatter } from "@/lib/utils";
 import Link from 'next/link';
+import { PrismaClient } from '@prisma/client';
 
 export default async function Home() {
   return (
@@ -66,6 +67,8 @@ const featuresCom = () => {
     </div>
   );
 };
+
+const prisma = new PrismaClient();
 
 const features = [
   {
