@@ -1,9 +1,9 @@
-import { useTable } from "react-table";
+import { useTable } from 'react-table';
 
 export default function Table({ data }: { data: any[] }) {
   const columns = [
-    { Header: "Label", accessor: "label" },
-    { Header: "Value", accessor: "value" },
+    { Header: 'Label', accessor: 'label' },
+    { Header: 'Value', accessor: 'value' },
   ];
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });
@@ -12,10 +12,10 @@ export default function Table({ data }: { data: any[] }) {
     <table {...getTableProps()} className="w-full">
       <thead>
         {headerGroups.map((headerGroup) => (
-          <tr {...headerGroup.getHeaderGroupProps()}>
+          <tr {...headerGroup.getHeaderGroupProps()} key={headerGroup.id}>
             {headerGroup.headers.map((column) => (
-              <th {...column.getHeaderProps()} className="border p-2">
-                {column.render("Header")}
+              <th {...column.getHeaderProps()} key={column.id} className="border p-2">
+                {column.render('Header')}
               </th>
             ))}
           </tr>
@@ -25,10 +25,10 @@ export default function Table({ data }: { data: any[] }) {
         {rows.map((row) => {
           prepareRow(row);
           return (
-            <tr {...row.getRowProps()}>
+            <tr {...row.getRowProps()} key={row.id}>
               {row.cells.map((cell) => (
-                <td {...cell.getCellProps()} className="border p-2">
-                  {cell.render("Cell")}
+                <td {...cell.getCellProps()} key={cell.column.id} className="border p-2">
+                  {cell.render('Cell')}
                 </td>
               ))}
             </tr>
