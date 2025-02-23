@@ -1,7 +1,17 @@
 import Link from 'next/link';
+import { PrismaClient } from '@prisma/client';
+
+const prisma = new PrismaClient();
+
 export default async function SearchResults({ searchParams }: { searchParams: { query: string } }) {
-  const response = await fetch(`/api/search?query=${searchParams.query}`);
-  const results = await response.json();
+  const results = await prisma.data.findMany({
+    where: {
+      OR: [
+        { title: { contains: searchParams.query || '', mode: 'insensitive' } },
+        { description: { contains: searchParams.query || '', mode: 'insensitive' } },
+      ],
+    },
+  });
 
   return (
     <div>
