@@ -4,7 +4,7 @@ export default async function SearchResults({ searchParams }: { searchParams: { 
 
   return (
     <div>
-      <h1>Search Results for "{searchParams.query}"</h1>
+      <h1>Search Results for &quot;{searchParams.query}&quot;</h1>
       <ul>
         {results.map((result) => (
           <li key={result.id}>
