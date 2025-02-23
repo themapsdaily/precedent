@@ -46,6 +46,18 @@ export default async function Home() {
   );
 }
 
+<form action="/search" method="GET">
+  <input
+    type="text"
+    name="query"
+    placeholder="Search for data..."
+    className="w-full rounded-lg border p-2"
+  />
+  <button type="submit" className="mt-2 rounded-lg bg-blue-500 p-2 text-white">
+    Search
+  </button>
+</form>
+
 const featuresCom = () => {
   return (
     <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
